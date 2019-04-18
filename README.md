@@ -6,7 +6,9 @@ This is a starter repo based on the
 [Gatsby](http://gatsbyjs.org/) and [Reveal.js](https://revealjs.com) and the
 back-end code execution uses [Binder](https://mybinder.org) 💖
 
-_This repo is still under construction._
+_This repo is still under construction. See
+[this issue](https://github.com/ines/course-starter-r/issues/1) for details –
+maybe you can help?_
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ines/courser-starter-r)
 
