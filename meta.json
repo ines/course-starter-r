@@ -9,11 +9,11 @@
     "fonts": "IBM+Plex+Mono:500|IBM+Plex+Sans:700|Lato:400,400i,700,700i",
     "testTemplate": "${test}\ntryCatch({\n\n    test()\n}, error = function(e) {\n    cat(paste(e[1]))\n})",
     "juniper": {
-        "repo": "ines/course-starter-python",
+        "repo": "ines/course-starter-r",
         "branch": "binder",
         "lang": "r",
-        "kernelType": "r",
         "debug": false
+        "kernelType": "ir",
     },
     "showProfileImage": true,
     "footerLinks": [
