@@ -12,8 +12,8 @@
         "repo": "ines/course-starter-r",
         "branch": "binder",
         "lang": "r",
-        "debug": false
         "kernelType": "ir",
+        "debug": false
     },
     "showProfileImage": true,
     "footerLinks": [
