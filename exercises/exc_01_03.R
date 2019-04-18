@@ -1,4 +1,4 @@
-library("rjson")
+library(rjson)
 library(ggplot2)
 
 # This code will run relative to the root of the repo, so we can load files
