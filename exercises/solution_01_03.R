@@ -1,4 +1,3 @@
-library(rjson)
 library(ggplot2)
 
 mtcars$gear <- factor(mtcars$gear,levels=c(3,4,5),
