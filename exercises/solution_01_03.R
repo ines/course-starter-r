@@ -8,12 +8,11 @@ mtcars$am <- factor(mtcars$am,levels=c(0,1),
 mtcars$cyl <- factor(mtcars$cyl,levels=c(4,6,8),
    labels=c("4cyl","6cyl","8cyl"))
 
-# Print the first record in mtcars
-print(mtcars[1])
+# Print the gear variable of mtcars
+print(mtcars$gear)
 
 # Assign the length of mtcars to some_var
 some_var <- length(mtcars)
 
-print(qplot(mpg, data=mtcars, geom="density", fill=gear, alpha=I(.5),
-   main="Distribution of Gas Milage", xlab="Miles Per Gallon",
-   ylab="Density"))
+# Uncomment this to see the plot
+# print(qplot(mpg, data=mtcars, geom="density", fill=gear, alpha=I(.5)))

@@ -6,9 +6,10 @@ This is a starter repo based on the
 [Gatsby](http://gatsbyjs.org/) and [Reveal.js](https://revealjs.com) and the
 back-end code execution uses [Binder](https://mybinder.org) 💖
 
-_This repo is still under construction. See
-[this issue](https://github.com/ines/course-starter-r/issues/1) for details –
-maybe you can help?_
+_This repo could use some better code examples. Also, if you have experience
+with R, feel free to suggest improvements to the
+[test logic and template](#adding-tests). It all works as expected, but there
+might be ways to make it more elegant._
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ines/courser-starter-r)
 
@@ -252,7 +253,57 @@ image.
 
 ### Adding tests
 
-TODO
+To validate the code when the user hits "Submit", we're currently using a
+slightly hacky trick. Since the R code is sent back to the kernel as a string,
+we can manipulate it and add tests – for example, exercise `exc_01_02_01.R` will
+be validated using `test_01_02_01.R` (if available). The user code and test are
+combined using a string template. At the moment, the `testTemplate` in the
+`meta.json` looks like this:
+
+```r
+success <- function(text) {
+    cat(paste("\033[32m", text, "\033[0m", sep = ""))
+}
+
+.solution <- "${solutionEscaped}"
+
+${solution}
+
+${test}
+tryCatch({
+    test()
+}, error = function(e) {
+    cat(paste("\033[31m", e[1], "\033[0m", sep = ""))
+})
+```
+
+If present, `${solution}` will be replaced with the string value of the
+submitted user code, and `${solutionEscaped}` with the code but with all `"`
+replaced by `\"`, so we can assign it to a variable as a string and check
+whether the submission includes something. We also insert the regular solution,
+so we can actually run it and check the objects it creates. `${test}` is
+replaced by the contents of the test file. The template also defines a `success`
+function, which prints a formatted green message and can be used in the tests.
+Finally, the `tryCatch` expression checks if the test function raises a `stop`
+and if so, it outputs the formatted error message. This also hides the full
+error traceback (which can easily leak the correct answers).
+
+A test file could then look like this:
+
+```r
+test <- function() {
+    if (some_var != length(mtcars)) {
+        stop("Are you getting the correct length?")
+    }
+    if (!grepl("print(mtcars$gear)", .solution, fixed = TRUE)) {
+        stop("Are you printing the correct variable?")
+    }
+    success("Well done!")
+}
+```
+
+The string answer is available as `.solution`, and the test also has access to
+the solution code.
 
 ---
 
