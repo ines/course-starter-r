@@ -17,7 +17,8 @@ might be ways to make it more elegant._
 
 ## ✅ Quickstart
 
-1. Fork this repo, install it and make sure the app is running locally.
+1. [Import](https://github.com/new/import) this repo, install it and make sure
+   the app is running locally.
 2. Customize the [`meta.json`](meta.json) and
    [`binder/install.R`](binder/install.R).
 3. Build a [Binder](https://mybinder.org) from the `binder` branch of this repo.
