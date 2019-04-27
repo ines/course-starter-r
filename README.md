@@ -242,12 +242,12 @@ A multiple-choice option.
 
 ### Setting up Binder
 
-The [`requirements.txt`](binder/requirements.txt) in the repository defines the
-packages that are installed when building it with Binder. You can specify the
-binder settings like repo, branch and kernel type in the `"juniper"` section of
-the `meta.json`. I'd recommend running the very first build via the interface on
-the [Binder website](https://mybinder.org), as this gives you a detailed build
-log and feedback on whether everything worked as expected. Enter your repository
+The [`install.R`](binder/install.R) in the repository defines the packages that
+are installed when building it with Binder. You can specify the binder settings
+like repo, branch and kernel type in the `"juniper"` section of the `meta.json`.
+I'd recommend running the very first build via the interface on the
+[Binder website](https://mybinder.org), as this gives you a detailed build log
+and feedback on whether everything worked as expected. Enter your repository
 URL, click "launch" and wait for it to install the dependencies and build the
 image.
 
