@@ -42,6 +42,9 @@ npm run dev                # Run the development server
 
 ## 💡Introduction
 
+> This section was contributed by [@laderast](https://github.com/laderast).
+> Thanks! ✨
+
 ### How does this repo work?
 
 The course repository works with two components: Gatsby (front-end), and Binder
