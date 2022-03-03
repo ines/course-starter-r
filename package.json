@@ -37,7 +37,7 @@
         "react-helmet": "^5.2.0",
         "rehype-react": "^3.1.0",
         "remark-react": "^5.0.1",
-        "reveal.js": "^3.8.0"
+        "reveal.js": "^4.3.0"
     },
     "scripts": {
         "build": "gatsby build",
