@@ -12,7 +12,7 @@
         "autoprefixer": "^9.4.7",
         "classnames": "^2.2.6",
         "codemirror": "^5.43.0",
-        "gatsby": "^2.1.4",
+        "gatsby": "^2.32.13",
         "gatsby-image": "^2.0.29",
         "gatsby-plugin-manifest": "^2.0.17",
         "gatsby-plugin-offline": "^2.0.23",
