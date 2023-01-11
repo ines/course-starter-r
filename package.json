@@ -27,7 +27,7 @@
         "gatsby-remark-smartypants": "^2.0.8",
         "gatsby-remark-unwrap-images": "^1.0.1",
         "gatsby-source-filesystem": "^2.0.20",
-        "gatsby-transformer-remark": "^2.2.5",
+        "gatsby-transformer-remark": "^5.25.1",
         "gatsby-transformer-sharp": "^2.1.17",
         "juniper-js": "^0.1.0",
         "node-sass": "^4.11.0",
